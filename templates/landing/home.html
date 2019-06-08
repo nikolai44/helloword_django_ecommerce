@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static "css/landing.css" %}">
+    <div class="section-top">
+        <img src="{% static 'landing/img/background.jpg' %}" class="img-fluid">
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="col-12 text-center">
+                <h4>iPhone</h4>
+            </div>
+            <div class="row">
+                {% for product_image in products_images_iphones %}
+                    <div class="col-lg-3">
+                        {% include 'landing/product_item.html' %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="col-12 text-center">
+                <h4>MacBook</h4>
+            </div>
+            <div class="row">
+                {% for product_image in products_images_macbooks %}
+                    <div class="col-lg-3">
+                        {% include 'landing/product_item.html' %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="col-12 text-center">
+                <h4>Xiaomi</h4>
+            </div>
+            <div class="row">
+                {% for product_image in products_images_xiaomi %}
+                    <div class="col-lg-3">
+                        {% include 'landing/product_item.html' %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock%}
